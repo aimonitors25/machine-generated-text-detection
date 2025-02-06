@@ -1,0 +1,24 @@
+{
+  "model": {
+    "base_model_path": "roberta-large/",  
+    "num_labels": 2  
+  },
+  "data": {
+    "train_dataset": "/train/0000.parquet",  
+    "dev_dataset": "/dev/0001.parquet",  
+    "test_dataset": "/test/0001.parquet"  
+  },
+  "training": {
+    "batch_size": 64,
+    "num_epochs": 3,
+    "learning_rate": 2e-5,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "gradient_clipping": 1.0
+  },
+  "output": {
+    "finetuned_model_dir": "/mgt/",
+     "finetuned_model_name":"Roberta_tuned_model_2.pt",
+     "output_test_file": "output_test_file.csv"
+  }
+}
